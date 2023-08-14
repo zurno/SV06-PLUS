@@ -1446,8 +1446,11 @@ void RTSSHOW::RTS_HandleData()
       }
       else if (recdat.data[0] == 4)
       {
+        queue.enqueue_now_P(PSTR("G1 F1200 X150.0 Z300.0"));
         queue.enqueue_now_P(PSTR("G34"));
-        queue.enqueue_now_P(PSTR("G1 F200 Z0.0"));
+        queue.enqueue_now_P(PSTR("G1 F1200 Z10.0"));
+        queue.enqueue_now_P(PSTR("G28 Z"));
+        queue.enqueue_now_P(PSTR("G1 F1200 Z50.0"));
       }
       else if (recdat.data[0] == 5)
       {
