@@ -807,8 +807,7 @@
    * Note: If the probe is not deploying, do a "Reset" and "Self-Test" and then check the
    *       wiring of the BROWN, RED and ORANGE wires.
    *
-   * Note: If the trigger signal of your probe is not being recognized, it has been very often
-   *       because the BLACK and WHITE wires needed to be swapped. They are not "interchangeable"
+   * Note: If the trigger signal of your probe is not being recognized, it has been very often41057
    *       like they would be with a real switch. So please check the wiring first.
    *
    * Settings for all BLTouch and clone probes:
@@ -3966,8 +3965,8 @@
 
   //#define GANTRY_CALIBRATION_SAFE_POSITION XY_CENTER // Safe position for nozzle
   //#define GANTRY_CALIBRATION_XY_PARK_FEEDRATE 3000  // XY Park Feedrate - MMM
-  //#define GANTRY_CALIBRATION_COMMANDS_PRE   ""
-  #define GANTRY_CALIBRATION_COMMANDS_POST  "G28 Z"     // G28 highly recommended to ensure an accurate position
+  #define GANTRY_CALIBRATION_COMMANDS_PRE   "G0 Z300.0"
+  #define GANTRY_CALIBRATION_COMMANDS_POST  "G0 Z10.0\nG28 Z"     // G28 highly recommended to ensure an accurate position
 #endif
 
 /**
