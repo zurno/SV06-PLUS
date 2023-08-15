@@ -1460,6 +1460,7 @@ void RTSSHOW::RTS_HandleData()
       if (recdat.data[0] == 11)//调整界面保存
       {
         settings.save();
+        queue.enqueue_now_P(PSTR("G1 F200 Z20.0"));
       }
       RTS_SndData(0, MOTOR_FREE_ICON_VP);
     break;
